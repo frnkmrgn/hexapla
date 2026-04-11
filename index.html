@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexapla</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0b;
+    color: #e4e4e7;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #fafafa;
+    margin-bottom: 1.8rem;
+  }
+  .tagline {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #a1a1aa;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.02em;
+    margin-bottom: 3rem;
+  }
+  .form-wrapper {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1.2rem;
+    border: 1px solid #27272a;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+    max-width: 480px;
+    width: 100%;
+  }
+  .form-wrapper:focus-within { border-color: #52525b; }
+  input[type="email"] {
+    flex: 1;
+    padding: 0.9rem 1.1rem;
+    background: transparent;
+    border: none;
+    color: #e4e4e7;
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+  }
+  input[type="email"]::placeholder { color: #52525b; }
+  button {
+    padding: 0.9rem 1.6rem;
+    background: #18181b;
+    border: none;
+    border-left: 1px solid #27272a;
+    color: #a1a1aa;
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+  button:hover { background: #27272a; color: #e4e4e7; }
+  .caption {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+    color: #52525b;
+    letter-spacing: 0.03em;
+  }
+  .success {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+    color: #4ade80;
+    margin-bottom: 1.2rem;
+    display: none;
+  }
+  .pillars {
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .pillar { margin-bottom: 4.5rem; }
+  .pillar:last-child { margin-bottom: 0; }
+  .pillar-label {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #52525b;
+    margin-bottom: 0.8rem;
+  }
+  .pillar h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fafafa;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+  }
+  .pillar p {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #a1a1aa;
+  }
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: #27272a;
+    margin-top: 4.5rem;
+  }
+  .advocacy {
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid #18181b;
+  }
+  .advocacy h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fafafa;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+  .advocacy-intro {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #a1a1aa;
+    margin-bottom: 3rem;
+  }
+  .advocacy-points {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .advocacy-point h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #e4e4e7;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01em;
+  }
+  .advocacy-point p {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #71717a;
+  }
+  .closing {
+    padding: 6rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #18181b;
+  }
+  .closing h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fafafa;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .closing p {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #a1a1aa;
+    margin-bottom: 1.5rem;
+  }
+  .closing .compound {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #e4e4e7;
+    font-style: italic;
+    margin-top: 2.5rem;
+  }
+  footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.7rem;
+    color: #3f3f46;
+    letter-spacing: 0.06em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 2.8rem; }
+    .tagline { font-size: 1rem; }
+    .pillar h2 { font-size: 1.3rem; }
+    .closing h2 { font-size: 1.4rem; }
+    .form-wrapper { flex-direction: column; }
+    button { border-left: none; border-top: 1px solid #27272a; }
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <h1>Hexapla</h1>
+  <p class="tagline">Create. Verify.<br>Replicable forensic feedback with compounding insight.</p>
+  <div class="form-wrapper" id="formWrapper">
+    <input type="email" id="emailInput" placeholder="your@email.com" required>
+    <button onclick="submitEmail()">Request Access</button>
+  </div>
+  <p class="success" id="successMsg">Received. We'll be in touch.</p>
+  <p class="caption">Hexapla compounds. Getting better with time.</p>
+</section>
+<section class="pillars">
+  <div class="pillar">
+    <div class="pillar-label">Focus</div>
+    <h2>Stop hunting for errors.</h2>
+    <p>The parts most likely to cause a problem rise to the surface. Ranked by likely drift, so you know exactly where to look first.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-label">Changes</div>
+    <h2>Own the evolution.</h2>
+    <p>See exactly what changed across shared AI-assisted work before anyone acts on it. Know what was kept, changed, or added across every contributor.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-label">Trace</div>
+    <h2>The definitive record.</h2>
+    <p>Complete visibility between the source, the AI output, and the final version. A forensic audit trail for every stage of the process.</p>
+  </div>
+</section>
+<section class="advocacy">
+  <h2>Provenance is a choice.</h2>
+  <p class="advocacy-intro">In a world of drifting data and black-box algorithms, true agency starts with the truth. Hexapla is built for those who refuse to build on sand.</p>
+  <div class="advocacy-points">
+    <div class="advocacy-point">
+      <h3>Agency through Accuracy</h3>
+      <p>The forensic clarity you need to make informed choices without blank assertion.</p>
+    </div>
+    <div class="advocacy-point">
+      <h3>Fortified Foundations</h3>
+      <p>Your materials are your bedrock. As your work scales, your foundations only get stronger.</p>
+    </div>
+    <div class="advocacy-point">
+      <h3>A Non-Generative Standard</h3>
+      <p>Drift is not default.</p>
+    </div>
+  </div>
+</section>
+<section class="closing">
+  <h2>Precision over Probability.</h2>
+  <p>Hexapla is a rigorous platform for discerning consistency in your specific micro-corpora.</p>
+  <p>The more you verify, the sharper it gets.</p>
+  <p class="compound">Hexapla compounds.</p>
+</section>
+<footer>In development. Launching 2026.</footer>
+<script>
+function submitEmail() {
+  const email = document.getElementById('emailInput').value;
+  if (!email || !email.includes('@')) return;
+  document.getElementById('formWrapper').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+  const stored = JSON.parse(localStorage.getItem('hexapla_signups') || '[]');
+  stored.push({ email, timestamp: new Date().toISOString() });
+  localStorage.setItem('hexapla_signups', JSON.stringify(stored));
+}
+</script>
+</body>
+</html>
