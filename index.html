@@ -80,17 +80,11 @@
     color: #52525b;
     letter-spacing: 0.03em;
   }
-  .success {
-    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
-    font-size: 0.9rem;
-    color: #4ade80;
-    margin-bottom: 1.2rem;
-    display: none;
-  }
   .pillars {
     padding: 6rem 2rem;
     max-width: 900px;
     margin: 0 auto;
+    border-top: 1px solid #18181b;
   }
   .pillar { margin-bottom: 4.5rem; }
   .pillar:last-child { margin-bottom: 0; }
@@ -187,8 +181,16 @@
     font-style: italic;
     margin-top: 2.5rem;
   }
-  footer {
+  .bottom-cta {
     padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid #18181b;
+  }
+  .bottom-cta .form-wrapper {
+    margin: 0 auto 1.2rem auto;
+  }
+  footer {
+    padding: 3rem 2rem;
     text-align: center;
     font-family: 'Calibri', 'Helvetica Neue', sans-serif;
     font-size: 0.7rem;
@@ -206,35 +208,37 @@
 </style>
 </head>
 <body>
+
 <section class="hero">
   <h1>Hexapla</h1>
   <p class="tagline">Create. Verify.<br>Replicable forensic feedback with compounding insight.</p>
-  <div class="form-wrapper" id="formWrapper">
-    <input type="email" id="emailInput" placeholder="your@email.com" required>
-    <button onclick="submitEmail()">Request Access</button>
-  </div>
-  <p class="success" id="successMsg">Received. We'll be in touch.</p>
-  <p class="caption">Hexapla compounds. Getting better with time.</p>
+  <form class="form-wrapper" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="caption">Every verification sharpens the next. Hexapla compounds.</p>
 </section>
+
 <section class="pillars">
   <div class="pillar">
-    <div class="pillar-label">Focus</div>
+    <div class="pillar-label">Triage</div>
     <h2>Stop hunting for errors.</h2>
     <p>The parts most likely to cause a problem rise to the surface. Ranked by likely drift, so you know exactly where to look first.</p>
     <div class="divider"></div>
   </div>
   <div class="pillar">
-    <div class="pillar-label">Changes</div>
+    <div class="pillar-label">Trace</div>
     <h2>Own the evolution.</h2>
     <p>See exactly what changed across shared AI-assisted work before anyone acts on it. Know what was kept, changed, or added across every contributor.</p>
     <div class="divider"></div>
   </div>
   <div class="pillar">
-    <div class="pillar-label">Trace</div>
+    <div class="pillar-label">Triangulate</div>
     <h2>The definitive record.</h2>
     <p>Complete visibility between the source, the AI output, and the final version. A forensic audit trail for every stage of the process.</p>
   </div>
 </section>
+
 <section class="advocacy">
   <h2>Provenance is a choice.</h2>
   <p class="advocacy-intro">In a world of drifting data and black-box algorithms, true agency starts with the truth. Hexapla is built for those who refuse to build on sand.</p>
@@ -245,7 +249,7 @@
     </div>
     <div class="advocacy-point">
       <h3>Fortified Foundations</h3>
-      <p>Your materials are your bedrock. As your work scales, your foundations only get stronger.</p>
+      <p>Your materials are the bedrock. As your work scales, the foundation self-strengthens.</p>
     </div>
     <div class="advocacy-point">
       <h3>A Non-Generative Standard</h3>
@@ -253,23 +257,23 @@
     </div>
   </div>
 </section>
+
 <section class="closing">
   <h2>Precision over Probability.</h2>
   <p>Hexapla is a rigorous platform for discerning consistency in your specific micro-corpora.</p>
-  <p>The more you verify, the sharper it gets.</p>
+  <p>Each verification builds on the last. Your corpus sharpens. Your baselines tighten. The instrument learns what matters to you.</p>
   <p class="compound">Hexapla compounds.</p>
 </section>
+
+<section class="bottom-cta">
+  <form class="form-wrapper" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">Request Access</button>
+  </form>
+  <p class="caption">Early access opens 2026.</p>
+</section>
+
 <footer>In development. Launching 2026.</footer>
-<script>
-function submitEmail() {
-  const email = document.getElementById('emailInput').value;
-  if (!email || !email.includes('@')) return;
-  document.getElementById('formWrapper').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
-  const stored = JSON.parse(localStorage.getItem('hexapla_signups') || '[]');
-  stored.push({ email, timestamp: new Date().toISOString() });
-  localStorage.setItem('hexapla_signups', JSON.stringify(stored));
-}
-</script>
+
 </body>
 </html>
