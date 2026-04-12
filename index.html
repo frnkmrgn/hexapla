@@ -12,6 +12,8 @@
     font-family: 'Georgia', 'Times New Roman', serif;
     -webkit-font-smoothing: antialiased;
   }
+
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -28,13 +30,20 @@
     color: #fafafa;
     margin-bottom: 1.8rem;
   }
-  .tagline {
-    font-size: 1.15rem;
+  .hero-axiom {
+    font-size: 1.3rem;
+    color: #e4e4e7;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+  .hero-explain {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
     line-height: 1.8;
     color: #a1a1aa;
-    font-family: 'Georgia', serif;
-    letter-spacing: 0.02em;
-    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
   }
   .form-wrapper {
     display: flex;
@@ -80,13 +89,31 @@
     color: #52525b;
     letter-spacing: 0.03em;
   }
-  .pillars {
+
+  /* SECTIONS */
+  .section {
     padding: 6rem 2rem;
     max-width: 900px;
     margin: 0 auto;
     border-top: 1px solid #18181b;
   }
-  .pillar { margin-bottom: 4.5rem; }
+  .section-axiom {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fafafa;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+  .section-explain {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #a1a1aa;
+    margin-bottom: 3rem;
+  }
+
+  /* PILLARS */
+  .pillar { margin-bottom: 3.5rem; }
   .pillar:last-child { margin-bottom: 0; }
   .pillar-label {
     font-family: 'Calibri', 'Helvetica Neue', sans-serif;
@@ -96,63 +123,27 @@
     color: #52525b;
     margin-bottom: 0.8rem;
   }
-  .pillar h2 {
-    font-size: 1.6rem;
+  .pillar h3 {
+    font-size: 1.2rem;
     font-weight: 400;
-    color: #fafafa;
-    margin-bottom: 1rem;
+    color: #e4e4e7;
+    margin-bottom: 0.8rem;
     letter-spacing: 0.01em;
   }
   .pillar p {
     font-family: 'Calibri', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.75;
-    color: #a1a1aa;
+    color: #71717a;
   }
   .divider {
     width: 40px;
     height: 1px;
     background: #27272a;
-    margin-top: 4.5rem;
+    margin-top: 3.5rem;
   }
-  .advocacy {
-    padding: 6rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    border-top: 1px solid #18181b;
-  }
-  .advocacy h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #fafafa;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
-  }
-  .advocacy-intro {
-    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #a1a1aa;
-    margin-bottom: 3rem;
-  }
-  .advocacy-points {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-  .advocacy-point h3 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #e4e4e7;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.01em;
-  }
-  .advocacy-point p {
-    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #71717a;
-  }
+
+  /* CLOSING */
   .closing {
     padding: 6rem 2rem;
     max-width: 700px;
@@ -160,11 +151,18 @@
     text-align: center;
     border-top: 1px solid #18181b;
   }
+  .closing-worldview {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #a1a1aa;
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    margin-bottom: 2.5rem;
+  }
   .closing h2 {
     font-size: 1.8rem;
     font-weight: 400;
     color: #fafafa;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.02em;
   }
   .closing p {
@@ -172,15 +170,17 @@
     font-size: 1rem;
     line-height: 1.8;
     color: #a1a1aa;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
-  .closing .compound {
+  .compound {
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
     color: #e4e4e7;
     font-style: italic;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
+
+  /* BOTTOM CTA */
   .bottom-cta {
     padding: 4rem 2rem;
     text-align: center;
@@ -189,18 +189,36 @@
   .bottom-cta .form-wrapper {
     margin: 0 auto 1.2rem auto;
   }
+
+  /* PRIVACY */
+  .privacy {
+    padding: 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .privacy p {
+    font-family: 'Calibri', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.8;
+    color: #3f3f46;
+    letter-spacing: 0.03em;
+  }
+
+  /* FOOTER */
   footer {
-    padding: 3rem 2rem;
+    padding: 2rem 2rem 3rem;
     text-align: center;
     font-family: 'Calibri', 'Helvetica Neue', sans-serif;
     font-size: 0.7rem;
     color: #3f3f46;
     letter-spacing: 0.06em;
   }
+
   @media (max-width: 600px) {
     h1 { font-size: 2.8rem; }
-    .tagline { font-size: 1rem; }
-    .pillar h2 { font-size: 1.3rem; }
+    .hero-axiom { font-size: 1.1rem; }
+    .section-axiom { font-size: 1.3rem; }
     .closing h2 { font-size: 1.4rem; }
     .form-wrapper { flex-direction: column; }
     button { border-left: none; border-top: 1px solid #27272a; }
@@ -209,62 +227,65 @@
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
   <h1>Hexapla</h1>
-  <p class="tagline">Creation scales with verification.<br>Replicable forensic feedback with compounding insight.</p>
+  <p class="hero-axiom">Provenance is a choice.</p>
+  <p class="hero-explain">Hexapla is a non-generative forensic verification platform for AI-assisted work. Catch drift, trace changes, and preserve a forensic record before anyone trusts, sends, or acts on the output.</p>
   <form class="form-wrapper" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <input type="email" name="email" placeholder="your@email.com" required>
     <button type="submit">Request Access</button>
   </form>
-  <p class="caption">Every verification sharpens the next. Hexapla compounds.</p>
+  <p class="caption">Creation scales with verification.</p>
 </section>
 
-<section class="pillars">
+<!-- WORKFLOW -->
+<section class="section">
+  <h2 class="section-axiom">Drift is not default.</h2>
+  <p class="section-explain">Rank what needs review first, trace what changed, and catalog a definitive record across source, AI output, and final output.</p>
+
   <div class="pillar">
     <div class="pillar-label">Triage</div>
-    <h2>Stop hunting for errors.</h2>
-    <p>The parts most likely to cause a problem rise to the surface. Ranked by likely drift, so you know exactly where to look first.</p>
+    <h3>Stop checking everything.</h3>
+    <p>Hexapla surfaces the sections most liable to drift, so reviewers direct attention where it matters first.</p>
     <div class="divider"></div>
   </div>
+
   <div class="pillar">
     <div class="pillar-label">Trace</div>
-    <h2>Own the evolution.</h2>
-    <p>See exactly what changed across shared AI-assisted work before anyone acts on it. Know what was kept, changed, or added across every contributor.</p>
+    <h3>See precisely what changed.</h3>
+    <p>Track what was preserved, modified, or added across AI-assisted drafts and human revisions.</p>
     <div class="divider"></div>
   </div>
+
   <div class="pillar">
     <div class="pillar-label">Triangulate</div>
-    <h2>The definitive record.</h2>
-    <p>Complete visibility between the source, the AI output, and the final version. A forensic audit trail for every stage of the process.</p>
+    <h3>Catalog the full record.</h3>
+    <p>View source material, AI output, and final output side by side with a forensic audit trail across each stage.</p>
   </div>
 </section>
 
-<section class="advocacy">
-  <h2>Provenance is a choice.</h2>
-  <p class="advocacy-intro">In a world of drifting data and black-box algorithms, true agency starts with the truth. Hexapla is built for those who refuse to build on sand.</p>
-  <div class="advocacy-points">
-    <div class="advocacy-point">
-      <h3>Agency through Accuracy</h3>
-      <p>The forensic clarity you need to make informed choices without blank assertion.</p>
-    </div>
-    <div class="advocacy-point">
-      <h3>Fortified Foundations</h3>
-      <p>Your materials are the bedrock. As your work scales, the foundation self-strengthens.</p>
-    </div>
-    <div class="advocacy-point">
-      <h3>A Non-Generative Standard</h3>
-      <p>Drift is not default.</p>
-    </div>
-  </div>
+<!-- AGENCY -->
+<section class="section">
+  <h2 class="section-axiom">Agency through Accuracy.</h2>
+  <p class="section-explain">Make decisions on verified foundations instead of black-box assertion. Verify AI-assisted work without relying on another generative layer or blind trust in probabilistic outputs.</p>
 </section>
 
-<section class="closing">
-  <h2>Precision over Probability.</h2>
-  <p>Hexapla is a rigorous platform for discerning consistency in your specific micro-corpora.</p>
-  <p>Each verification builds on the last. Your corpus sharpens. Your baselines tighten. The instrument learns what matters to you.</p>
+<!-- FOUNDATIONS -->
+<section class="section">
+  <h2 class="section-axiom">Fortified Foundations.</h2>
+  <p class="section-explain">Your materials are the bedrock. As verification accumulates, your corpus strengthens and your baseline sharpens. Each verification refines the next. Hexapla adapts to what matters in your context.</p>
   <p class="compound">Hexapla compounds.</p>
 </section>
 
+<!-- CLOSING -->
+<section class="closing">
+  <p class="closing-worldview">In a world of drifting data and black-box algorithms, true agency starts with ground truth.</p>
+  <h2>Precision over Probability.</h2>
+  <p>Replicable forensic feedback with compounding insight.</p>
+</section>
+
+<!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <form class="form-wrapper" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <input type="email" name="email" placeholder="your@email.com" required>
@@ -273,8 +294,9 @@
   <p class="caption">Early access opens 2026.</p>
 </section>
 
-<div style="padding: 2rem; text-align: center; max-width: 600px; margin: 0 auto;">
-  <p style="font-family: 'Calibri', 'Helvetica Neue', sans-serif; font-size: 0.75rem; line-height: 1.8; color: #3f3f46; letter-spacing: 0.03em;">Your materials stay yours. Your identity remains protected and anonymized. Hexapla never learns from or stores your actual content.</p>
+<!-- PRIVACY -->
+<div class="privacy">
+  <p>Your materials stay yours. Your identity remains protected and anonymized. Hexapla never learns from or stores your actual content.</p>
 </div>
 
 <footer>In development. Launching 2026.</footer>
