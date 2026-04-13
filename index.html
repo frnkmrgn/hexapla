@@ -589,11 +589,11 @@
   var lockOrder = [0, 3, 1, 5, 4, 2];
   var lockIndex = 0;
   var cycleCount = 0;
-  var cyclesPerLock = 3;
+  var cyclesPerLock = 2;
   // Deceleration: each lock phase gets slower
-  var speeds = [30, 30, 35, 45, 60, 80];
+  var speeds = [25, 28, 32, 40, 55, 70];
   var logosFlashed = false;
-  var logosAt = 6; // flash Logos after this many cycles
+  var logosAt = 5; // flash Logos after this many cycles
 
   for (var i = 0; i < len; i++) {
     current[i] = glyphs[Math.floor(Math.random() * glyphs.length)];
@@ -617,7 +617,7 @@
     if (!logosFlashed && cycleCount === logosAt) {
       logosFlashed = true;
       el.textContent = 'Logos';
-      setTimeout(tick, 130);
+      setTimeout(tick, 100);
       return;
     }
 
