@@ -500,7 +500,6 @@
 
 <!-- ═══ Title Page ═══ -->
 <section class="title-page">
-  <p class="colophon await-calibration">ambro systems</p>
   <h1 id="calibrate">Hexapla</h1>
   <p class="subtitle await-calibration">forensic verification for ai-assisted work</p>
   <p class="ornament await-calibration">&middot;&ensp;&middot;&ensp;&middot;</p>
@@ -511,7 +510,7 @@
     <input class="email-field" type="email" name="email" placeholder="your@email.com" required>
     <button type="submit" class="cta-link">request access<span class="arrow">&thinsp;&rarr;</span></button>
   </form>
-  <p class="folio-note await-calibration">provenance is a choice. drift is not.</p>
+  <p class="folio-note await-calibration">provenance is a choice</p>
 </section>
 
 <!-- ═══ Chapter I: The Three Columns ═══ -->
@@ -540,6 +539,12 @@
   </div>
 </section>
 
+<!-- ═══ Compounding Verification ═══ -->
+<section class="chapter">
+  <h2 class="chapter-heading">Compounding verification.</h2>
+  <p class="chapter-body">Hexapla strengthens with use. As verified records accumulate across your materials, drafts, and decisions, the system sharpens its baseline, improves review precision, and reinforces continuity across future work. Context compounds. Drift does not.</p>
+</section>
+
 <!-- ═══ Chapter II: Objection Preempt ═══ -->
 <section class="chapter">
   <h2 class="chapter-heading">Verification without another generative layer.</h2>
@@ -561,7 +566,7 @@
 <!-- ═══ Privacy ═══ -->
 <section class="chapter">
   <h2 class="chapter-heading">Privacy is part of the record.</h2>
-  <p class="chapter-body">Hexapla never learns from or stores your actual content. Verification should strengthen control, not require surrendering it.</p>
+  <p class="chapter-body">Hexapla processes your materials for verification only. Content is not used for model training or platform improvement. Verification should strengthen control, not require surrendering it.</p>
 </section>
 
 <!-- ═══ Bottom CTA ═══ -->
@@ -581,26 +586,28 @@
 (function() {
   var el = document.getElementById('calibrate');
 
-  // Choreographed convergence: each position cycles through
-  // typographically related forms toward its target letter.
+  // Choreographed convergence with three linguistic layers:
+  // Abra/Cadabra (Aramaic, creation) → Logos (Greek, reason) → Hexapla (product).
   // Positions 5,6 (l,a) lock first. Positions 0-4 align to
-  // "Logos" at frame 5 before the contracted flash, then
-  // resolve through Hexapla.
+  // "Logos" before the contracted flash, then resolve.
   var frames = [
     'Wszdtfn',   // distant families
     'Iokcbiu',   // shifting
-    'Tnvogjo',   // rounder forms emerging
+    'Abra',      // Aramaic — creation
+    'Cadabra',   // Aramaic — manifestation
+    'Tnvogjo',   // transition
     'Nuwcqic',   // converging
     'Kcyegla',   // l and a settle
-    'Logosla',   // Logos visible in first five
-    'Logos',     // contracted flash
+    'Logosla',   // Logos approaching
+    'Logos',     // Greek — reason
     'Loxopla',   // departing, x and p lock
     'Hexcpla',   // near-miss
     'Hexapla'    // lock
   ];
 
-  // Decelerating: fast early, breathes at Logos, slows to settle
-  var timing = [38, 38, 38, 40, 48, 55, 95, 55, 72];
+  // Scramble is the texture. Flashes are ~2x scramble speed,
+  // enough to register, not enough to read as standalone words.
+  var timing = [32, 30, 58, 62, 30, 32, 35, 38, 72, 40, 55];
 
   var i = 0;
   el.textContent = frames[0];
