@@ -69,6 +69,10 @@
     letter-spacing: 0.5em;
     color: #9a968e;
     margin-bottom: 3.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.45rem 1.2rem;
+    border-radius: 2px;
+    display: inline-block;
   }
 
   .ornament {
@@ -182,6 +186,10 @@
     color: #6a665e;
     letter-spacing: 0.25em;
     margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.45rem 1.2rem;
+    border-radius: 2px;
+    display: inline-block;
   }
 
   /* ── Section Conventions ── */
@@ -284,6 +292,13 @@
     margin-bottom: 1.2rem;
     text-transform: lowercase;
     white-space: nowrap;
+  }
+
+  .label-tag {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+    margin-left: 0.3em;
   }
 
   .column h3 {
@@ -494,19 +509,19 @@
 
   <div class="triptych">
     <div class="column">
-      <p class="column-numeral">i &ensp; triage</p>
+      <p class="column-numeral">i<span class="label-tag">triage</span></p>
       <h3>Stop checking everything.</h3>
       <p>Hexapla surfaces the sections most likely to drift, so reviewers focus attention where it matters first.</p>
     </div>
     <div class="column-rule"></div>
     <div class="column">
-      <p class="column-numeral">ii &ensp; trace</p>
+      <p class="column-numeral">ii<span class="label-tag">trace</span></p>
       <h3>See precisely what changed.</h3>
       <p>Track what was preserved, modified, or added across AI-assisted drafts and human revisions.</p>
     </div>
     <div class="column-rule"></div>
     <div class="column">
-      <p class="column-numeral">iii &ensp; triangulate</p>
+      <p class="column-numeral">iii<span class="label-tag">triangulate</span></p>
       <h3>Preserve the full record.</h3>
       <p>View source material, AI output, and final output side by side with a forensic audit trail across each stage.</p>
     </div>
